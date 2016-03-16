@@ -49,10 +49,10 @@ h1, h2, h3, h4, h5, h6 {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
   .nav.transition {
-    -webkit-transition-duration: .9s;
-    transition-duration: .9s;
-    -webkit-transition-timing-function: ease-out;
-    transition-timing-function: ease-out; }
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    -webkit-transition-timing-function: cubic-bezier(0.05, 0.87, 0.41);
+    transition-timing-function: cubic-bezier(0.05, 0.87, 0.41); }
   .nav ul {
     list-style: none;
     padding: 0;
