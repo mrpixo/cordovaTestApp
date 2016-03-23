@@ -1,0 +1,27 @@
+/* -> CLEARFIX */
+
+.clearfix {
+	&:after{
+		content: "";
+	    display: table;
+	    clear: both;
+	}
+}
+/* -> FULL WIDTH */
+.full-width {
+	width: 100%;
+	display: block;
+}
+
+/* -> HIDDEN */
+.is-hidden {
+	display: none;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}

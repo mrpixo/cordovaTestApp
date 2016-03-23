@@ -1,0 +1,21 @@
+html {
+	font-size: $base-font-size;
+	height: 100%;
+}
+
+body {
+	/*background-color: grey;*/
+	height: 100%;
+	
+	font-size: 14px;
+	font-size: 1.4rem;
+
+	-webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    -ms-content-zooming: none;
+}
+
+b {
+	font-weight: bold;
+}

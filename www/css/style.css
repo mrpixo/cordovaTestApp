@@ -1,51 +1,276 @@
+/* 
+============================================
+HELPERS (VARIABLES, MIXINS, FUNCTIONS, HELPERS - helpers classes)
+============================================ 
+*/
+/* 
+============================================
+PRIMARY COLOURS
+============================================
+*/
+/* -> PRIMARY COLOUR */
+/* -> PRIMARY COLOUR HOVER STATE */
+/* -> PRIMARY COLOUR FOCUS STATE */
+/* 
+============================================
+SECONDARY COLOURS
+============================================
+*/
+/* -> SECONDARY COLOUR */
+/* -> SECONDARY COLOUR HOVER STATE */
+/* -> SECONDARY COLOUR FOCUS STATE */
+/* 
+============================================
+FONT SIZES
+============================================
+*/
+/* -> CLEARFIX */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/* -> FULL WIDTH */
+.full-width {
+  width: 100%;
+  display: block; }
+
+/* -> HIDDEN */
+.is-hidden {
+  display: none; }
+
+.pull-left {
+  float: left; }
+
+.pull-right {
+  float: right; }
+
+/* 
+============================================
+ATOMS IMPORTS (COLORS, BUTTONS, RESET)
+============================================ 
+*/
+/*
+============================================
+1. RESET
+============================================
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none; }
+
+input {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 10px;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-appearance: none; }
+
 html {
+  font-size: 10px;
   height: 100%; }
 
 body {
   /*background-color: grey;*/
-  margin: 0;
-  padding: 0;
+  height: 100%;
+  font-size: 14px;
+  font-size: 1.4rem;
   -webkit-touch-callout: none;
   /* prevent callout to copy image, etc when tap to hold */
   -webkit-text-size-adjust: none;
   /* prevent webkit from resizing text to fit */
   -webkit-user-select: none;
-  height: 100%;
   /* prevent copy paste, to allow, change 'none' to 'text' */
-  overflow-x: hidden;
-  -ms-content-zooming: none;
-  position: relative; }
+  -ms-content-zooming: none; }
 
-* {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+b {
+  font-weight: bold; }
 
-h1, h2, h3, h4, h5, h6 {
-  margin: 0;
-  padding: 0; }
+/* 
+============================================
+PRIMARY COLOURS
+============================================
+*/
+/* -> PRIMARY COLOUR */
+/* -> PRIMARY COLOUR HOVER STATE */
+/* -> PRIMARY COLOUR FOCUS STATE */
+/* 
+============================================
+SECONDARY COLOURS
+============================================
+*/
+/* -> SECONDARY COLOUR */
+/* -> SECONDARY COLOUR HOVER STATE */
+/* -> SECONDARY COLOUR FOCUS STATE */
+/* 
+============================================
+GENERAL BUTTONS STYLING
+============================================
+*/
+.btn {
+  padding: 12px 24px;
+  border: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  font-size: 1.8rem;
+  cursor: pointer; }
+  .btn:disabled, .btn.disabled {
+    opacity: .5;
+    cursor: not-allowed; }
 
-/* HEADER */
-.header {
-  height: 100px;
+/* 
+============================================
+PRIMARY BUTTONS
+============================================
+*/
+.btn--primary {
+  background-color: #DB0011;
+  color: #fff; }
+  .btn--primary:hover {
+    background-color: #A4000D; }
+  .btn--primary:focus, .btn--primary.focus {
+    background-color: #83000A; }
+  .btn--primary:disabled:hover, .btn--primary:disabled:focus, .btn--primary.disabled:hover, .btn--primary.disabled:focus {
+    background-color: #DB0011; }
+
+/* 
+============================================
+SECONDARY BUTTONS
+============================================
+*/
+/* ANIMATIONS */
+@-webkit-keyframes test {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(360deg); } }
+@-moz-keyframes test {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(360deg); } }
+@-o-keyframes test {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(360deg); } }
+@keyframes test {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(360deg); } }
+.rotation {
+  -webkit-animation: test 2s linear infinite;
+  -moz-animation: test 2s linear infinite;
+  -o-animation: test 2s linear infinite;
+  animation: test 2s linear infinite; }
+
+/* INPUTS */
+.input-field {
+  font-size: 1.4rem;
   width: 100%;
-  background-color: red; }
-  .header .logo {
-    color: #fff; }
+  margin-bottom: 10px;
+  border: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #cdcdcd; }
+  .input-field:focus {
+    border-color: #008580; }
 
+/* H TAGS */
+h1 {
+  font-size: 2.4rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.8rem; }
+
+h4 {
+  font-size: 1.6rem; }
+
+h5 {
+  font-size: 1.4rem; }
+
+h6 {
+  font-size: 1.2rem; }
+
+/* SPINNER */
+.spinner {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  display: block;
+  margin: 0 auto; }
+
+/* 
+============================================
+MOLECULES IMPORTS
+============================================ 
+*/
 /* NAV */
 .nav {
   width: 80%;
+  height: 100%;
   height: -moz-calc(100% - 100px);
   height: -webkit-calc(100% - 100px);
   height: calc(100% - 100px);
   position: absolute;
   right: 0;
+  top: 100px;
   background-color: black;
   color: #fff;
-  /*-moz-transition: left .9s cubic-bezier(.05,.87,.71,.99);
-  -webkit-transition: left .9s cubic-bezier(.05,.87,.71,.99);
-  transition: left .9s cubic-bezier(.05,.87,.71,.99);*/
+  z-index: 6;
   -webkit-transform: translate3d(100%, 0, 0);
   transform: translate3d(100%, 0, 0); }
   .nav.isActive {
@@ -61,12 +286,160 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0; }
 
+/* LOGIN */
+.login {
+  width: 80%;
+  margin: 50px auto;
+  text-align: center; }
+  .login .login-container__field {
+    width: 100%;
+    margin-bottom: 20px; }
+
+.login__heading {
+  font-size: 2.8rem;
+  margin-bottom: 20px; }
+
+.login__form-group {
+  position: relative; }
+  .login__form-group .input-field {
+    padding-left: 20px; }
+    .login__form-group .input-field:focus + .fa--inline-icon {
+      color: #4D6474; }
+
+.fa--inline-icon {
+  position: absolute;
+  left: 0;
+  top: 12px; }
+
+.list__item {
+  border-bottom: 1px solid #cdcdcd;
+  margin-bottom: 5px;
+  width: 100%;
+  display: table;
+  padding: 15px 0; }
+
+/* WELCOME */
+.welcome {
+  width: 100%;
+  text-align: center; }
+
+.welcome__title {
+  font-size: 2.8rem;
+  margin-bottom: 20px; }
+
+.welcome__text {
+  font-size: 1.4rem; }
+
+/* TABS */
+.c-tabs {
+  height: 100%; }
+
+.c-tabs-nav {
+  display: table;
+  border-bottom: 2px solid grey; }
+  .c-tabs-nav > a {
+    display: block;
+    float: left;
+    margin-right: 2px;
+    padding: 10px 20px;
+    background-color: #cdcdcd;
+    text-decoration: none;
+    color: #000; }
+    .c-tabs-nav > a.is-active {
+      background-color: grey;
+      color: #fff; }
+
+.c-tab {
+  display: none;
+  height: 100%;
+  overflow-y: scroll;
+  padding-right: 20px; }
+  .c-tab.is-active {
+    display: block; }
+
+.c-tab__content {
+  padding: 20px 0; }
+
+/* 
+============================================
+ORGANISMS IMPORTS (HEADER, FOOTER)
+============================================ 
+*/
+.header,
+.footer {
+  position: absolute;
+  z-index: 9;
+  width: 100%; }
+
+/* HEADER */
+.header {
+  height: 100px;
+  padding-top: 20px;
+  background-color: #DB0011;
+  top: 0; }
+  .header .status-bar {
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #a8000d; }
+
+/* LOGO */
+.logo {
+  float: left;
+  width: 60px;
+  height: 60px;
+  display: block;
+  margin: 10px;
+  background: url("../img/logo-zuehlke-@1.png");
+  text-indent: -10000px;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo {
+      background: url("../img/logo-zuehlke-@2.png");
+      -webkit-background-size: 60px 60px;
+      background-size: 60px 60px; } }
+
 /* MENU */
-.menu-btn {
-  float: right; }
+.menu-icon-container {
+  padding: 20px 30px; }
+
+.menu-icon-contaner__icon {
+  float: right;
+  color: #fff; }
+
+/* APP VIEW */
+.app {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative; }
+
+/* WRAPPER */
+.wrapper {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  bottom: 50px;
+  left: 0;
+  z-index: 5; }
 
 /* CONTENT */
 .content {
-  width: 100%; }
+  height: 100%;
+  overflow: hidden;
+  /*overflow: scroll;
+  -webkit-overflow-scrolling: touch;*/
+  padding: 20px; }
+
+/* FOOTER */
+.footer {
+  bottom: 0;
+  height: 50px;
+  background-color: red; }
 
 /*# sourceMappingURL=style.css.map */

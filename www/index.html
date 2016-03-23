@@ -29,40 +29,84 @@
                 * Enable inline JS: add 'unsafe-inline' to default-src
         -->
         <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        
+        <link rel="stylesheet" href="font/css/font-awesome.min.css">
+
         <link rel="stylesheet" type="text/css" href="css/style.css">
+
         <title>Hello World NEW</title>
     </head>
     <body>
         <div class="app">
-        <header class="header">
-            <h1 class="logo">My logo</h1>
-            <button class="pull-right menu-btn">Menu</button>
-        </header>
-        <nav class="nav transition">
-            <ul>
-                <li class="nav__item">Test</li>
-                <li class="nav__item">Item2</li>
-                <li class="nav__item">Item3</li>
-                <li class="nav__item">Item4</li>
-            </ul>
-        </nav>
-        <section class="content">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            <div class="spinner"></div>
-        </section>
-        <footer class="footer"></footer>
-            <!-- <h1>My wonderful Apache Cordova/Jesper</h1> -->
 
-            <!-- <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div> -->
+            <!-- HEADER -->
+            <header class="header">
+                <div class="status-bar"></div>
+                <h1 class="logo">My Logo</h1>
+               <div class="menu-icon-container pull-right">
+                <i class="fa fa-navicon menu-icon-contaner__icon fa-3x"></i>
+                </div>
+            </header>
+            <!-- // HEADER -->
+
+            <!-- SIDE NAVIGATION -->
+            <nav class="nav transition">
+                <ul>
+                    <li class="nav__item">Test</li>
+                    <li class="nav__item">Item2</li>
+                    <li class="nav__item">Item3</li>
+                    <li class="nav__item">Item4</li>
+                </ul>
+            </nav>
+            <!-- // SIDE NAVIGATION -->
+
+            <!-- WARPPER -->
+            <section class="wrapper">
+                <div class="content">
+                
+                    <!-- WELCOME TEXT -->
+                    <div class="welcome">
+                        <h2 class="welcome__title">Welcome to HSBC</h2>
+                        <p class="welcome__text">Welcome to HSBC online banking account, please login below in order to have access to you account details.</p>
+                    </div>
+                    <!-- // WELCOME TEXT -->
+                    
+                    <!-- LOGIN -->
+                    <div class="login clearfix">
+                        
+                        <h3 class="login__heading"><i class="fa fa-lock"></i> Login</h3>
+                        <div class="login__form-group">
+                            <input type="text" class="input-field" placeholder="Username" />
+                            <i class="fa fa-user fa--inline-icon"></i>
+                        </div>
+                        <div class="login__form-group">
+                            <input type="password" class="input-field" placeholder="Password" />
+                            <i class="fa fa-lock fa--inline-icon"></i>
+                        </div>
+                        <button class="btn btn--primary">Submit</button>
+                    </div>
+                    <!-- LOGIN -->
+                    
+                    <!-- <div class="spinner rotation"></div>  / JUST FOR TESTING -->
+                </div>
+
+            </section>
+            <!-- WARPPER -->
+
+            <!-- FOOTER -->
+            <footer class="footer is-hidden">
+                test
+            </footer>
+            <!-- // FOOTER -->
+
         </div>
         <!-- <script type="text/javascript" src="cordova.js"></script> -->
         <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/hammer.js"></script>
         <script type="text/javascript" src="js/test.js"></script>
         
     </body>

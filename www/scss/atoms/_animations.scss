@@ -1,0 +1,25 @@
+/* ANIMATIONS */
+
+@-webkit-keyframes test {
+  0%   { transform:rotateZ(0deg); }
+  100% { transform: rotateZ(360deg) }
+}
+@-moz-keyframes test {
+  0%   { transform:rotateZ(0deg); }
+  100% { transform:rotateZ(360deg); }
+}
+@-o-keyframes test {
+  0%   { transform:rotateZ(0deg); }
+  100% { transform:rotateZ(360deg); }
+}
+@keyframes test {
+  0%   { transform:rotateZ(0deg); }
+  100% { transform:rotateZ(360deg); }
+}
+
+.rotation {
+  -webkit-animation: test 2s linear infinite;
+  -moz-animation: test 2s linear infinite;
+  -o-animation: test 2s linear infinite;
+  animation: test 2s linear infinite;
+}

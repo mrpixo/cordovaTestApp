@@ -1,0 +1,41 @@
+/* TABS */
+
+
+.c-tabs {
+	height: 100%;
+}
+
+.c-tabs-nav {
+	display: table;
+	border-bottom: 2px solid grey;
+
+	& > a {
+		display: block;
+		float: left;
+		margin-right: 2px;
+		padding: 10px 20px;
+		background-color: lighten(grey, 30%);
+		text-decoration: none;
+		color: #000;
+
+		&.is-active {
+			background-color: grey;
+			color: #fff;
+		}
+	}
+}
+
+.c-tab {
+	display: none;
+	height: 100%;
+	overflow-y: scroll;
+	padding-right: 20px;
+
+	&.is-active {
+		display: block;
+	}
+}
+
+.c-tab__content {
+	padding: 20px 0;
+}

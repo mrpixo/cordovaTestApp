@@ -1,0 +1,15 @@
+/* INPUTS */
+
+.input-field {
+	font-size: 1.4rem;
+	width: 100%;
+	margin-bottom: 10px;
+	border: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: lighten(grey, 30%);
+
+	&:focus {
+		border-color: #008580;
+	}
+}

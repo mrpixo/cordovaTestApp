@@ -1,0 +1,33 @@
+/* LOGIN */
+
+.login {
+	width: 80%;
+	margin: 50px auto;
+	text-align: center;
+
+	.login-container__field {
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+.login__heading {
+	font-size: 2.8rem;
+	margin-bottom: 20px;
+}
+.login__form-group {
+	position: relative;
+
+	.input-field {
+		padding-left: 20px;
+
+		&:focus + .fa--inline-icon {
+			color: $secondary-color;
+		}
+	}
+	
+}
+.fa--inline-icon {
+	position: absolute;
+	left: 0;
+	top: 12px;
+}
